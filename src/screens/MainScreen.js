@@ -7,7 +7,7 @@ const MainScreen=({navigation})=>{
             <View style={{padding:40,marginTop:15}}>
                 <View style={styles.Container}>
                     <Image
-                    source={require('../../assets/images.jpeg')}
+                    source={require('../../assets/image/images.jpeg')}
                     style={styles.ImageStyle}
                     borderRadius={59}
                     />

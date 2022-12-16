@@ -1,11 +1,27 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity,Linking } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity,Linking,Image } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
 const AbountScreen=({navigation})=>{
         return(
         <View style={styles.container}>
             <View style={{padding:40,marginTop:80}}>
+                <View>
+                    <Image
+                        source={require('../../assets/image/Developer.jpg')}
+                        style={styles.ImageStyle}
+                    />
+                </View>
+                <View style={styles.BorderTextStyle}>
+                    <Text style={styles.AbountStyle}>
+                            QuizWord mobil uygulaması; İngilizce kelimelerin türkçe karşılıklarını
+                            bulmanızı isteyen sorularla dolu bir uygulamadır.Her doğru soruda 10 puan 
+                            kazanılır ve sonunda da skor ve kelimelerin türkçe karşılıkları sonuç ekranında
+                            görüntülenilir.Uygulama mobil uygulama geliştirme dersi final ödevi için hazırlanılmıştır.
+                            Geliştiricinin sosyal medya hesabına ve uygulamanın kodlarına (Github) ulaşabilirsiniz.
+
+                    </Text>
+                </View>
                 <View style={styles.IconStyle}>
                     <TouchableOpacity onPress={()=>{Linking.openURL("https://twitter.com/erdiorun");}} 
                     style={styles.LinkStyle}>
@@ -30,6 +46,21 @@ const styles=StyleSheet.create({
     container:{
         backgroundColor:"#64DFDF",
         height:"100%",
+    },
+    ImageStyle:{
+        width:150,
+        height:150,
+    },
+    BorderTextStyle:{
+        borderRadius:30,
+        backgroundColor:"#2196F3",
+        padding:20,
+        marginBottom:20,
+        marginTop:60
+    },
+    AbountStyle:{
+        textAlign:"center",
+        fontSize:18
     },
     ButtonStyle:{
         alignItems:"center",
@@ -56,8 +87,8 @@ const styles=StyleSheet.create({
         color:"#00acee",
         backgroundColor:"white",
         padding:10,
-        fontSize:20,
-        width:40,
+        fontSize:30,
+        width:50,
         borderRadius:50,
         marginRight:20,
         marginLeft:100,
@@ -67,8 +98,8 @@ const styles=StyleSheet.create({
         color:"#171515",
         backgroundColor:"white",
         padding:10,
-        fontSize:20,
-        width:40,
+        fontSize:30,
+        width:50,
         borderRadius:50,
     },
     IconStyle:{
