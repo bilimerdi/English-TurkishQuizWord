@@ -11,7 +11,7 @@ const AbountScreen=({navigation})=>{
                     style={styles.LinkStyle}>
                         <Feather name="twitter" style={styles.TwitterStyle}></Feather>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={()=>{Linking.openURL("https://github.com/bilimerdi/English-Turkish-Word-Game");}} 
+                    <TouchableOpacity onPress={()=>{Linking.openURL("https://github.com/bilimerdi/English-TurkishQuizWord");}} 
                     style={styles.LinkStyle}>
                         <Feather name="github" style={styles.GitHubStyle}></Feather>
                     </TouchableOpacity>
