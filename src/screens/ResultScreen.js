@@ -1,15 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet,SafeAreaView, ScrollView, StatusBar, TouchableOpacity  } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import AppHeader from "../components/AppHeader";
 
 const ResultScreen=({navigation})=>{
     return(
         <SafeAreaView style={styles.containerScrollView}>
             <ScrollView>
                 <View style={styles.container}>
-                    <View>
-                        <Text style={styles.AppNameText}>QUİZWORD</Text>
-                    </View>
+                    <AppHeader/>
                     <View style={styles.scoreBorderStyle}>
                         <Text style={styles.scoreStyle}>SKOR</Text>
                         <Text style={styles.scoreTextStyle}>70</Text>
@@ -125,18 +124,6 @@ const styles=StyleSheet.create({
     container:{
         marginTop:50,
         alignItems:"center",
-    },
-    AppNameText:{
-        fontSize:60,
-        marginBottom:10,
-        color:"#2196F3",
-        fontWeight:"800",
-        borderColor:"#2196F3",
-        borderWidth:1,
-        paddingLeft:5,
-        paddingRight:5,
-        textAlign:"center",
-        borderRadius:16
     },
     scoreStyle:{
         fontSize:70,

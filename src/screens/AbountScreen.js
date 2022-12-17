@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity,Linking,Image } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import AppHeader from "../components/AppHeader.js";
 
 const AbountScreen=({navigation})=>{
         return(
         <View style={styles.container}>
             <View style={{padding:40}}>
                 <View style={styles.ImageBorderStyle}>
-                    <Text style={styles.AppNameText}>QUİZWORD</Text>
+                    <AppHeader></AppHeader>
                     <Image
                         source={require('../../assets/image/Developer.jpg')}
                         style={styles.ImageStyle}
@@ -49,18 +50,6 @@ const styles=StyleSheet.create({
     container:{
         backgroundColor:"#64DFDF",
         height:"100%",
-    },
-    AppNameText:{
-        fontSize:60,
-        marginBottom:10,
-        color:"#2196F3",
-        fontWeight:"800",
-        borderColor:"#2196F3",
-        borderWidth:1,
-        paddingLeft:5,
-        paddingRight:5,
-        textAlign:"center",
-        borderRadius:16
     },
     ImageBorderStyle:{
         alignItems:"center",
