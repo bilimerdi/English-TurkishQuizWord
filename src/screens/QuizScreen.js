@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity} from "react-native";
 
-const QuizScreen=()=>{
+const QuizScreen=({navigation})=>{
     return(
         <View style={styles.container}>
             <View style={styles.questionBorderStyle}>
@@ -31,6 +31,8 @@ const QuizScreen=()=>{
 const styles=StyleSheet.create({
     container:{
         paddingTop:30,
+        backgroundColor:"#64DFDF",
+        height:"100%"
     },
     questionBorderStyle:{
         margin:30,

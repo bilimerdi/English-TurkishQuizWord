@@ -17,11 +17,11 @@ const AbountScreen=({navigation})=>{
                 </View>
                 <View style={styles.BorderTextStyle}>
                     <Text style={styles.AbountStyle}>
-                            QuizWord mobil uygulaması; İngilizce kelimelerin türkçe karşılıklarını
-                            bulmanızı isteyen sorularla dolu bir quiz uygulamasıdır.Her doğru soruda 10 puan 
+                            QuizWord mobil uygulaması; 10 adet ingilizce kelimenin türkçe karşılıklarını
+                            doğru bulmanız gereken bir quiz uygulamasıdır.Her doğru soruda 10 puan 
                             kazanılır ve sonunda da skor ve kelimelerin Türkçe karşılıkları sonuç ekranında
-                            görüntülenilir.Uygulama mobil uygulama geliştirme dersi final ödevi için hazırlanılmıştır.
-                            Geliştiricinin sosyal medya hesabına ve uygulamanın kodlarına aşağıdaki linklerden (Github) ulaşabilirsiniz.
+                            görüntülenilir.QuizWord mobil uygulama geliştirme dersi final ödevi için hazırlanmıştır.
+                            Geliştiricinin sosyal medya hesabına ve uygulamanın kodlarına aşağıdaki linklerden ulaşabilirsiniz.
 
                     </Text>
                 </View>
@@ -58,7 +58,9 @@ const styles=StyleSheet.create({
         borderColor:"#2196F3",
         borderWidth:1,
         paddingLeft:5,
-        paddingRight:5
+        paddingRight:5,
+        textAlign:"center",
+        borderRadius:16
     },
     ImageBorderStyle:{
         alignItems:"center",
