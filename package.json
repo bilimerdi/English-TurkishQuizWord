@@ -12,6 +12,8 @@
     "@expo/vector-icons": "^13.0.0",
     "@expo/webpack-config": "^0.17.2",
     "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/native": "^6.1.1",
+    "axios": "^1.2.1",
     "expo": "~47.0.8",
     "expo-status-bar": "~1.4.2",
     "feather-icons": "^4.29.0",

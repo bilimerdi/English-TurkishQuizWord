@@ -19,9 +19,6 @@ const MainScreen=({navigation})=>{
                     <TouchableOpacity onPress={()=>navigation.navigate("Abount")} style={styles.ButtonStyle}>
                         <Text style={styles.TextStyle}>HAKKIMDA</Text>
                     </TouchableOpacity >
-                    <TouchableOpacity onPress={()=>navigation.navigate("Result")}>
-                        <Text>Score</Text>
-                    </TouchableOpacity>
                 </View>
             </View>
         </View>
