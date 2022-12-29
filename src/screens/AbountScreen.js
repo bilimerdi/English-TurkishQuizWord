@@ -39,7 +39,6 @@ const AbountScreen = ({ navigation }) => {
             onPress={() => {
               Linking.openURL("https://twitter.com/erdiorun");
             }}
-            style={styles.LinkStyle}
           >
             <Feather name="twitter" style={styles.TwitterStyle}></Feather>
           </TouchableOpacity>
@@ -49,7 +48,6 @@ const AbountScreen = ({ navigation }) => {
                 "https://github.com/bilimerdi/English-TurkishQuizWord"
               );
             }}
-            style={styles.LinkStyle}
           >
             <Feather name="github" style={styles.GitHubStyle}></Feather>
           </TouchableOpacity>
