@@ -8,9 +8,7 @@ import {
   StatusBar,
   TouchableOpacity,
 } from "react-native";
-import { Feather } from "@expo/vector-icons";
 import AppHeader from "../components/AppHeader";
-import { useRoute } from "@react-navigation/native";
 
 const ResultScreen = ({ navigation }) => {
   return (

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import jsonServer from "../api/jsonServer";
+import Result from "../components/Result";
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -14,24 +16,10 @@ const QuizScreen = ({ navigation }) => {
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
   const fetchData = async () => {
-    const url = "https://1a01-37-154-137-147.eu.ngrok.io/memory";
-    const res = await fetch(url);
-    const data = await res.json();
-
+    const res = await jsonServer.get("/memory");
+    const data = res.data;
     setWords(data);
     setOptions(generateOptionsAndShuffle(data[0]));
-  };
-  const putData = () => {
-    const dataScore = { score: "50" };
-    fetch("https://1a01-37-154-137-147.eu.ngrok.io/scores", {
-      method: "PUT",
-      body: JSON.stringify(dataScore),
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((response) => console.log(JSON.stringify(response)));
   };
   useEffect(() => {
     fetchData();
@@ -64,13 +52,13 @@ const QuizScreen = ({ navigation }) => {
 
   const handleShowResult = () => {
     navigation.navigate("Result");
-    putData();
   };
 
   return (
     <View style={styles.container}>
       {words && (
         <View style={styles.parent}>
+          <Result score={score}></Result>
           <View style={styles.questionBorderStyle}>
             <Text style={styles.questionTextStyle}>
               Aşağıdaki kelimenin türkçe karşılığı hangi şıkta doğru
@@ -130,12 +118,13 @@ const QuizScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 100,
+    paddingTop: 80,
     backgroundColor: "#64DFDF",
     height: "100%",
   },
   questionBorderStyle: {
     margin: 30,
+    marginTop: 10,
     alignItems: "center",
     backgroundColor: "#2196F3",
     borderRadius: 16,
@@ -147,7 +136,7 @@ const styles = StyleSheet.create({
   },
   wordBorderStyle: {
     margin: 100,
-    marginTop: 20,
+    marginTop: 10,
     marginBottom: 20,
     alignItems: "center",
     backgroundColor: "red",
@@ -159,7 +148,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   optionBorderStyle: {
-    marginTop: 50,
+    marginTop: 10,
   },
   optionStyle: {
     margin: 30,
