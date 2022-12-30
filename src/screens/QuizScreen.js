@@ -106,7 +106,7 @@ const QuizScreen = ({ navigation }) => {
                 style={styles.optionStyle}
                 onPress={handleShowResult}
               >
-                <Text style={styles.optionTextStyle}>SONUÇLARI GÖRÜNTÜLE</Text>
+                <Text style={styles.optionTextStyle}>BiTİTR</Text>
               </TouchableOpacity>
             )}
           </View>
