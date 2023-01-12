@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import jsonServer from "../api/jsonServer";
 import Result from "../components/Result";
 import Loading from "../components/Loading";
@@ -45,20 +45,10 @@ const QuizScreen = ({ navigation }) => {
     if (__option === words[word].correct_answer) {
       setScore(score + 10);
     }
-    if (word !== 9) {
+    if (word !== 10) {
       setWord(word + 1);
       setOptions(generateOptionsAndShuffle(words[word + 1]));
     }
-    if (word === 9) {
-      handleShowResult();
-    }
-  };
-
-  const handleShowResult = () => {
-    const delay = () => {
-      navigation.navigate("Result");
-    };
-    setTimeout(delay, 1400);
   };
 
   return (
@@ -69,57 +59,67 @@ const QuizScreen = ({ navigation }) => {
         words && (
           <View style={styles.parent}>
             <Result score={score}></Result>
-            <View style={styles.questionBorderStyle}>
-              <Text style={styles.questionTextStyle}>
-                Aşağıdaki kelimenin türkçe karşılığı hangi şıkta doğru
-                verilmiştir?
-              </Text>
-            </View>
-            <View style={styles.wordBorderStyle}>
-              <Text style={styles.wordTextStyle}>{words[word].word}</Text>
-            </View>
-            <View style={styles.optionBorderStyle}>
-              <TouchableOpacity
-                style={styles.optionStyle}
-                onPress={() => handleSelectedOption(options[0])}
-              >
-                <Text style={styles.optionTextStyle}>{options[0]}</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.optionStyle}
-                onPress={() => handleSelectedOption(options[1])}
-              >
-                <Text style={styles.optionTextStyle}>{options[1]}</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.optionStyle}
-                onPress={() => handleSelectedOption(options[2])}
-              >
-                <Text style={styles.optionTextStyle}>{options[2]}</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.optionStyle}
-                onPress={() => handleSelectedOption(options[3])}
-              >
-                <Text style={styles.optionTextStyle}>{options[3]}</Text>
-              </TouchableOpacity>
-              {word !== 9 && (
+            {word === 10 ? (
+              <View style={styles.resultBorderStyle}>
+                <Image
+                  source={require("../../assets/image/thankYou.jpg")}
+                  style={styles.ImageStyle}
+                />
+
                 <TouchableOpacity
-                  style={styles.optionStyle}
-                  onPress={handleNextPress}
+                  onPress={() => navigation.navigate("Main")}
+                  style={styles.ButtonStyle}
                 >
-                  <Text style={styles.optionTextStyle}>Next</Text>
+                  <Text style={styles.ButtonTextStyle}>Ana Menüye Dön</Text>
                 </TouchableOpacity>
-              )}
-              {word === 9 && (
-                <TouchableOpacity
-                  style={styles.optionStyle}
-                  onPress={handleShowResult}
-                >
-                  <Text style={styles.optionTextStyle}>BiTİR</Text>
-                </TouchableOpacity>
-              )}
-            </View>
+              </View>
+            ) : (
+              <View>
+                <View style={styles.questionBorderStyle}>
+                  <Text style={styles.questionTextStyle}>
+                    Aşağıdaki kelimenin türkçe karşılığı hangi şıkta doğru
+                    verilmiştir?
+                  </Text>
+                </View>
+                <View style={styles.wordBorderStyle}>
+                  <Text style={styles.wordTextStyle}>{words[word].word}</Text>
+                </View>
+                <View style={styles.optionBorderStyle}>
+                  <TouchableOpacity
+                    style={styles.optionStyle}
+                    onPress={() => handleSelectedOption(options[0])}
+                  >
+                    <Text style={styles.optionTextStyle}>{options[0]}</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.optionStyle}
+                    onPress={() => handleSelectedOption(options[1])}
+                  >
+                    <Text style={styles.optionTextStyle}>{options[1]}</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.optionStyle}
+                    onPress={() => handleSelectedOption(options[2])}
+                  >
+                    <Text style={styles.optionTextStyle}>{options[2]}</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.optionStyle}
+                    onPress={() => handleSelectedOption(options[3])}
+                  >
+                    <Text style={styles.optionTextStyle}>{options[3]}</Text>
+                  </TouchableOpacity>
+                  {word !== 10 && (
+                    <TouchableOpacity
+                      style={styles.optionStyle}
+                      onPress={handleNextPress}
+                    >
+                      <Text style={styles.optionTextStyle}>Sonraki</Text>
+                    </TouchableOpacity>
+                  )}
+                </View>
+              </View>
+            )}
           </View>
         )
       )}
@@ -175,6 +175,38 @@ const styles = StyleSheet.create({
   },
   parent: {
     height: "100%",
+  },
+  resultBorderStyle: {
+    backgroundColor: "#64DFDF",
+    height: "100%",
+    alignItems: "center",
+  },
+  ButtonStyle: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 20,
+    backgroundColor: "#2196F3",
+    width: 310,
+    height: 70,
+    borderRadius: 50,
+    /*add shadow*/
+    shadowColor: "black",
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+    elevation: 24,
+  },
+  ButtonTextStyle: {
+    fontSize: 30,
+  },
+  ImageStyle: {
+    marginTop: 30,
+    marginBottom: 50,
+    height: "50%",
+    width: "85%",
   },
 });
 
