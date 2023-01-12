@@ -3,11 +3,11 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 const MainScreen = ({ navigation }) => {
   return (
-    <View style={{ backgroundColor: "#64DFDF", height: "100%" }}>
+    <View style={{ backgroundColor: "#9f8cca", height: "100%" }}>
       <View style={{ padding: 40, marginTop: 15 }}>
         <View style={styles.Container}>
           <Image
-            source={require("../../assets/image/images.jpeg")}
+            source={require("../../assets/image/unnamed.png")}
             style={styles.ImageStyle}
             borderRadius={59}
           />
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 20,
-    backgroundColor: "#2196F3",
+    backgroundColor: "#ab3cfc",
     width: 250,
     height: 90,
     borderRadius: 50,

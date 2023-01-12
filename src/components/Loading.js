@@ -17,6 +17,6 @@ const styles = StyleSheet.create({
     marginBottom: 50,
     fontSize: 50,
     textAlign: "center",
-    color: "#2196F3",
+    color: "#ab3cfc",
   },
 });

@@ -65,7 +65,7 @@ const AbountScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#64DFDF",
+    backgroundColor: "#9f8cca",
     height: "100%",
   },
   ImageBorderStyle: {
@@ -85,11 +85,11 @@ const styles = StyleSheet.create({
   },
   BorderTextStyle: {
     borderRadius: 30,
-    backgroundColor: "#2196F3",
+    backgroundColor: "#ab3cfc",
     padding: 20,
     marginBottom: 10,
     /*add shadow*/
-    shadowColor: "black",
+    shadowColor: "#ab3cfc",
     shadowOffset: {
       width: 0,
       height: 12,
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 20,
-    backgroundColor: "#2196F3",
+    backgroundColor: "#ab3cfc",
     width: 310,
     height: 70,
     borderRadius: 50,

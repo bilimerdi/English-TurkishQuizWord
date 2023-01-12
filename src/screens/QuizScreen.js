@@ -62,7 +62,7 @@ const QuizScreen = ({ navigation }) => {
             {word === 10 ? (
               <View style={styles.resultBorderStyle}>
                 <Image
-                  source={require("../../assets/image/thankYou.jpg")}
+                  source={require("../../assets/image/wallpaper.jpg")}
                   style={styles.ImageStyle}
                 />
 
@@ -130,14 +130,14 @@ const QuizScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 80,
-    backgroundColor: "#64DFDF",
+    backgroundColor: "#9f8cca",
     height: "100%",
   },
   questionBorderStyle: {
     margin: 30,
     marginTop: 10,
     alignItems: "center",
-    backgroundColor: "#2196F3",
+    backgroundColor: "#ab3cfc",
     borderRadius: 16,
     padding: 20,
   },
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 20,
     alignItems: "center",
-    backgroundColor: "red",
+    backgroundColor: "#7e6df3",
     borderRadius: 16,
     padding: 15,
   },
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     margin: 30,
     marginTop: -10,
     alignItems: "center",
-    backgroundColor: "#2196F3",
+    backgroundColor: "#ab3cfc",
     borderRadius: 16,
     padding: 15,
   },
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   resultBorderStyle: {
-    backgroundColor: "#64DFDF",
+    backgroundColor: "#9f8cca",
     height: "100%",
     alignItems: "center",
   },
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 20,
-    backgroundColor: "#2196F3",
+    backgroundColor: "#ab3cfc",
     width: 310,
     height: 70,
     borderRadius: 50,
