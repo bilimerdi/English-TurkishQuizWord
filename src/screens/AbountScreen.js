@@ -27,11 +27,10 @@ const AbountScreen = ({ navigation }) => {
           <Text style={styles.AbountStyle}>
             QuizWord mobil uygulaması; 10 adet ingilizce kelimenin türkçe
             karşılıklarını doğru bulmanız gereken bir quiz uygulamasıdır.Her
-            doğru soruda 10 puan kazanılır ve sonunda da skor ve kelimelerin
-            Türkçe karşılıkları sonuç ekranında görüntülenilir.QuizWord mobil
-            uygulama geliştirme dersi final ödevi için hazırlanmıştır.
-            Geliştiricinin sosyal medya hesabına ve uygulamanın kodlarına
-            aşağıdaki linklerden ulaşabilirsiniz.
+            doğru soruda 10 puan kazanılır ve toplam skorunuz sonuç ekranında
+            görüntülenir.QuizWord,mobil uygulama geliştirme dersi final ödevi
+            için hazırlanmıştır. Geliştiricinin sosyal medya hesabına ve
+            uygulama kodlarına aşağıdaki linklerden ulaşabilirsiniz.
           </Text>
         </View>
         <View style={styles.IconStyle}>
