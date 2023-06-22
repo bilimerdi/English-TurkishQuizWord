@@ -15,6 +15,11 @@ Proje kaynak kodlarına [bu GitHub linkinden](https://github.com/bilimerdi/Engli
 - Her doğru cevap kullanıcının puanını 10 artırır.
 - Toplamda 10 soru sorulur ve quizin sonunda kullanıcının puanı gösterilir.
 
+![page1](https://media.licdn.com/dms/image/C4D22AQGTBon6kIzX7w/feedshare-shrink_1280/0/1674646787551?e=1690416000&v=beta&t=-GYRZ8o4SKoUyFirV794XJb8RG5JjDOKzYpieKUGCGo)
+![page2](https://media.licdn.com/dms/image/C4D22AQFY0H1f6veCcA/feedshare-shrink_1280/0/1674646789676?e=1690416000&v=beta&t=lYs3CRw_Q4io4BQ-tkPPg26kzKNXS8VRikSt242Q3uY)
+![page3](https://media.licdn.com/dms/image/C4D22AQG8tKnEOvkdtg/feedshare-shrink_1280/0/1674646788100?e=1690416000&v=beta&t=79gK3en8pFxAdnq2Wt6ABdJyjxXbCLnad73U2_S0ISw)
+![page4](https://media.licdn.com/dms/image/C4D22AQHg2X_pzZt8xQ/feedshare-shrink_1280/0/1674646786793?e=1690416000&v=beta&t=NjolZZjGl39j3puURwt7p4aJ7kP9Tj5Z6pU9ubGMBBg)
+
 ## Kurulum Adımları
 
 1. Projeyi GitHub reposundan klonlayın:
